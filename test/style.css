@@ -1,0 +1,91 @@
+body {
+  font-family: Roboto, Helvetica, sans-serif;
+  background-color: #FAFAFA;
+}
+
+#stats {
+}
+
+#stats > * {
+  display: inline-block;
+  width: calc(50% - 20px);
+}
+
+#stats .passing {
+  color: #4CAF50;
+  text-align: right;
+}
+
+#stats .failing {
+  color: #F44336;
+  margin-left: 35px;
+}
+
+#tests {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: -20px;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 300px;
+  margin: 20px;
+  padding: 15px 20px 20px 20px;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.test.fail {
+  background-color: #FFCDD2;
+}
+
+.test.success {
+  background-color: #C8E6C9;
+}
+
+.test:hover {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.test .title {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  opacity: 0.87;
+}
+
+.test .description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.4em;
+  opacity: 0.54;
+}
+
+.test .goal {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.4em;
+  opacity: 0.54;
+}
+
+.test .results {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 230px;
+}
+
+.test canvas {
+  border: 1px solid grey;
+}

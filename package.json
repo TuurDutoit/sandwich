@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "name": "sandwich",
+  "version": "0.0.1",
+  "description": "A library for Photoshop-like layered canvases",
+  "main": "sandwich.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rollup:test": "rollup -o build/test.js test/test.js --format cjs",
+    "browserify:test": "browserify -o test/bundle.js build/test.js",
+    "build:test": "npm run rollup:test && npm run browserify:test",
+    "build:test:watch": "watch 'npm run build:test' . --filter=test/filter.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TuurDutoit/sandwich.git"
+  },
+  "keywords": [
+    "photoshop",
+    "ps",
+    "illustrator",
+    "ai",
+    "graphics",
+    "canvas",
+    "layer",
+    "library",
+    "tasty"
+  ],
+  "author": "Tuur Dutoit <me@tuurdutoit.be>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TuurDutoit/sandwich/issues"
+  },
+  "homepage": "https://github.com/TuurDutoit/sandwich#readme",
+  "devDependencies": {
+    "rollup": "^0.26.3",
+    "watch": "^0.18.0"
+  }
+}
